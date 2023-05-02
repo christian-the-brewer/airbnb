@@ -71,6 +71,9 @@ const UserMenu = () => {
                             onClick={() => {}}
                             label='Login'
                             />
+                            <MenuItem 
+                            onClick={() => {}}
+                            label='Sign Up'/>
                         </>
                     </div>
                 </div>
