@@ -17,10 +17,13 @@ const Button: React.FC<ButtonProps> = ({
     disabled,
     outline,
     small,
-    icon
+    icon: Icon
 }) => {
     return (
-        <button className={
+        <button 
+        onClick={onClick}
+        disabled={disabled}
+        className={
             `relative
             disabled:opacity-70
             disabled:cursor-not-allowed
@@ -37,6 +40,9 @@ const Button: React.FC<ButtonProps> = ({
             ${small ? 'border-[1px]' : 'border-2'}
             `
         }>
+            {Icon && (
+                <Icon className='absolute left-4 top-3' size={24} />
+            )}
             {label}
         </button>
     )
